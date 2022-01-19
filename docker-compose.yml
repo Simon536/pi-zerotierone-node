@@ -1,1 +1,14 @@
+version "3"
 
+services:
+  zerotierone:
+    container_name: zero-tier-one
+    image: zyclonite/zerotier
+    network: host
+    ports:
+      - "9993:9993/udp"
+    volumes:
+      - /var/lib/zerotier-one:/var/lib/zerotier-one
+    devices:
+      - /dev/net/tun
+    restart: unless-stopped
