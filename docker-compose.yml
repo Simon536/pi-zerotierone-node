@@ -4,7 +4,7 @@ services:
   zerotierone:
     container_name: zero-tier-one
     image: zyclonite/zerotier
-    network: host
+    network_mode: "host"
     ports:
       - "9993:9993/udp"
     volumes:
