@@ -11,4 +11,7 @@ services:
       - /var/lib/zerotier-one:/var/lib/zerotier-one
     devices:
       - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
     restart: unless-stopped
